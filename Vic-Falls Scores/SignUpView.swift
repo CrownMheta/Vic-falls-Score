@@ -13,4 +13,6 @@ struct SignUpView: View {
             .font(.largeTitle)
             .padding()
     }
-}
+} 
+
+
