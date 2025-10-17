@@ -9,9 +9,10 @@ import SwiftUI
 
 struct FirstPage: View {
     var body: some View {
-        Text("reset your password")
+        Text("Welcome")
             .font(.largeTitle)
             .padding()
+        
         
            
     }
