@@ -41,6 +41,7 @@ struct FirstPage: View {
                     .aspectRatio(contentMode: .fill)
                     .ignoresSafeArea()
                     .opacity(0.2)
+                    .ignoresSafeArea()
                 
                 NavigationLink(destination: Home()) {
                     
