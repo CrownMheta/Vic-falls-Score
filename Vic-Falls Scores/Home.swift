@@ -56,7 +56,7 @@ struct Home: View {
                             .frame(width: 350, height: 150)
                             .background(.gray)
                             .cornerRadius(18)
-                            .offset(x: 50, y: -60)
+                            .offset(x: 70, y: -60)
                         
                         
                         
@@ -150,6 +150,7 @@ struct Home: View {
                 
                 
             }
+            .navigationBarBackButtonHidden()
         }
     }
 }
