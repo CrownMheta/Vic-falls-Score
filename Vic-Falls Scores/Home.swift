@@ -26,108 +26,131 @@ struct Home: View {
     @State private var currentIndex: Int = 0
     
     var body: some View {
-        ZStack {
-            ZStack(alignment: .bottomLeading) {
+        NavigationStack {
+            ZStack {
+                ZStack(alignment: .bottomLeading) {
+                    
+                    
+                    
+                    Image("cup")
+                    
+                        .resizable()
+                    
+                        .aspectRatio(contentMode: .fill)
+                        .ignoresSafeArea()
+                        .opacity(0.8)
+                        .ignoresSafeArea()
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    VStack(alignment: .leading, spacing: 15) {
+                        let player = players[currentIndex]
+                        
+                        Image(player.imageName)
+                            .resizable()
+                            .scaledToFit()
+                            .frame(width: 350, height: 150)
+                            .background(.gray)
+                            .cornerRadius(18)
+                            .offset(x: 50, y: -60)
+                        
+                        
+                        
+                        Text(player.name)
+                            .font(.title2)
+                            .foregroundColor(.white)
+                            .fontDesign(.serif)
+                            .offset(x: 100, y: -65 )
+                        
+                        HStack(spacing: -6) {
+                            Button(action: {
+                                if currentIndex > 0 {
+                                    currentIndex -= 1
+                                }
+                            }) {
+                                Text("Previous")
+                                    .padding(8)
+                                    .foregroundColor(.blue)
+                                    .background(.black)
+                                    .cornerRadius(10)
+                                
+                                
+                            }
+                            .disabled(currentIndex == 0)
+                            .offset(x: 60,y: -80 )
+                            
+                            Button(action: {
+                                if currentIndex < players.count - 1 {
+                                    currentIndex += 1
+                                }
+                            }) {
+                                Text("  Next  ")
+                                    .padding(8)
+                                    .foregroundColor(.purple)
+                                    .bold()
+                                    .background(.black)
+                                    .cornerRadius(10)
+                                
+                                
+                                
+                            }
+                            .disabled(currentIndex == players.count - 1)
+                            .offset(x: 255,y: -80 )
+                        }
+                    }
+                    .padding()
+                    
+                }
                 
                 
+                Text ("     Upcoming Matches ")
+                    .font(.title2)
+                    .bold()
+                    .foregroundStyle(.white)
+                    .offset(x: -20, y: 16)
                 
-                Image("cup")
+                Text ("Vic-falls Score Board")
+                    .font(.title2)
+                    .bold()
+                    .foregroundStyle(.white)
+                    .offset(x: -85, y: -355)
                 
+                
+                Image("believe")
                     .resizable()
                 
-                    .aspectRatio(contentMode: .fill)
-                    .ignoresSafeArea()
-                    .opacity(0.8)
-                    .ignoresSafeArea()
+                    .frame(width: 390, height: 260)
+                    .cornerRadius(20)
+                    .offset(x: -1, y: -205)
                 
                 
-               
-                
-                
-                
-                
-                VStack(alignment: .leading, spacing: 15) {
-                    let player = players[currentIndex]
-                    
-                    Image(player.imageName)
+                NavigationLink(destination: LiveScorePage()){
+                    Image(systemName: "tablecells")
                         .resizable()
-                        .scaledToFit()
-                        .frame(width: 350, height: 150)
-                        .background(.gray)
-                        .cornerRadius(18)
-                        .offset(x: 50, y: -60)
-                    
-                    
-                    
-                    Text(player.name)
-                        .font(.title2)
-                        .foregroundColor(.white)
-                        .fontDesign(.serif)
-                        .offset(x: 100, y: -65 )
-                    
-                    HStack(spacing: -6) {
-                        Button(action: {
-                            if currentIndex > 0 {
-                                currentIndex -= 1
-                            }
-                        }) {
-                            Text("Previous")
-                                .padding(8)
-                                .foregroundColor(.blue)
-                                .background(.black)
-                                .cornerRadius(10)
-                            
-                            
-                        }
-                        .disabled(currentIndex == 0)
-                        .offset(x: 60,y: -80 )
-                        
-                        Button(action: {
-                            if currentIndex < players.count - 1 {
-                                currentIndex += 1
-                            }
-                        }) {
-                            Text("  Next  ")
-                                .padding(8)
-                                .foregroundColor(.purple)
-                                .bold()
-                                .background(.black)
-                                .cornerRadius(10)
-                            
-                            
-                            
-                        }
-                        .disabled(currentIndex == players.count - 1)
-                        .offset(x: 255,y: -80 )
-                    }
+                        .frame(width: 30, height: 30)
+                        .foregroundStyle(.black)
                 }
-                .padding()
+                
+                .offset(x: -110, y: 399)
+                
+                
+                NavigationLink(destination: ProfilesPage()) {
+                    Image(systemName: "person")
+                        .resizable()
+                        .frame(width: 30, height: 30)
+                        .foregroundStyle(.black)
+                    
+                    
+                }
+                .offset(x: 100, y: 399)
+                
                 
             }
-            
-            
-            Text ("     Upcoming Matches ")
-                .font(.title2)
-                .bold()
-                .foregroundStyle(.white)
-                .offset(x: -20, y: 16)
-                
-            Text ("Vic-falls Score Board")
-                .font(.title2)
-                .bold()
-                .foregroundStyle(.white)
-                .offset(x: -85, y: -355)
-            
-           
-           Image("believe")
-                .resizable()
-                
-                .frame(width: 390, height: 260)
-                .cornerRadius(20)
-                .offset(x: -1, y: -205)
-               
         }
-        
     }
 }
 #Preview {
