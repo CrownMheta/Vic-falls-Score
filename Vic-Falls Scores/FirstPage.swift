@@ -65,12 +65,14 @@ struct FirstPage: View {
                 Text("Every goal, every game we Crown it")
                     .font(.caption)
                     .bold()
+                
+               
             }
         }
         
     }
 }
 #Preview {
-    ContentView()
+    Home()
 }
 
