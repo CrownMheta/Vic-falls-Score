@@ -40,7 +40,14 @@ struct ProfilesPage: View {
         ),
         Profile(name: "Ronaldo", imageName: "ronaldo", description: "A creative forward famous for his flair, skill moves, and goal-scoring ability."),
         
-        Profile(name: "Sauraz", imageName: "Sauraz", description: "Suárez is known for his prolific goal-scoring ability and clever movement as a striker")
+        Profile(name: "Sauraz", imageName: "Sauraz", description: "Suárez is known for his prolific goal-scoring ability and clever movement as a striker"),
+        Profile(name: "Dembele", imageName: "dembele", description: "Dembélé, a forward for Paris Saint-Germain and the France national team, known for his speed and ability to play with both feet."),
+        Profile(name: "Kelvin", imageName: "kelvin", description: "Kelvin is known for his creativity, technique, and goal-creating ability, and has won numerous trophies throughout his career. "),
+        Profile(name: "Salah", imageName: "lah", description: "Mohamed Salah, is known for being a prolific and fast goal-scoring forward who plays for Liverpool and the Egyptian national team. He is celebrated for his speed, dribbling, and ability to score crucial goals. "),
+        Profile(name: "Vinicius", imageName: "vinnie", description: "Vinicius is known for his exceptional dribbling, pace, and stamina as a winger for Spanish club Real Madrid and the Brazil national team"),
+        Profile(name: "Virgil", imageName: "virgil1", description: "Virgil van Dijk is known for being a dominant, world-class center-back, widely considered one of the best defenders of his generation."),
+        Profile(name: "Yamal", imageName: "yamal", description: "Lamine Yamal is known for being a prodigious Spanish footballer for FC Barcelona, celebrated for his exceptional dribbling, creativity, and flair.")
+        
     ]
     
         
@@ -63,12 +70,13 @@ struct ProfilesPage: View {
                     Image(player.imageName)
                         .resizable()
                         .scaledToFit()
-                        .frame(height: 300)
+                        .frame(width: 390, height: 300)
                         .background(.gray.opacity(0.6))
-                        .clipShape(Circle())
-                        .offset(x: 20, y: -219)
+                        .cornerRadius(20)
+                        .offset(x: 64, y: -219)
+                       
                         
-                    
+
                     Text(player.name)
                         .font(.title2)
                         .bold()
