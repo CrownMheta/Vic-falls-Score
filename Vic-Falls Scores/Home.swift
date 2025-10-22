@@ -56,7 +56,7 @@ struct Home: View {
                             .frame(width: 350, height: 150)
                             .background(.gray)
                             .cornerRadius(18)
-                            .offset(x: 50, y: -60)
+                            .offset(x: 70, y: -60)
                         
                         
                         
@@ -111,7 +111,7 @@ struct Home: View {
                     .font(.title2)
                     .bold()
                     .foregroundStyle(.white)
-                    .offset(x: -20, y: 16)
+                    .offset(x: -80, y: 40)
                 
                 Text ("Vic-falls Score Board")
                     .font(.title2)
@@ -120,7 +120,7 @@ struct Home: View {
                     .offset(x: -85, y: -355)
                 
                 
-                Image("believe")
+                Image("ronaldo7")
                     .resizable()
                 
                     .frame(width: 390, height: 260)
@@ -150,6 +150,7 @@ struct Home: View {
                 
                 
             }
+            .navigationBarBackButtonHidden()
         }
     }
 }
