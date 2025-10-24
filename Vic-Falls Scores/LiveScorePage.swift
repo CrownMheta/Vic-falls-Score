@@ -35,7 +35,7 @@ struct LiveScorePage: View {
                     ForEach(matches) { match in
                         MatchCard(match: match)
                     }
-                    Link(destination: URL(string: "https://www.flashscore.com")!) {
+                    Link(destination: URL(string: "https://www.sofascore.com/")!) {
                                         Text("See Live Scores")
                                             .font(.headline)
                                             .foregroundColor(.white)
