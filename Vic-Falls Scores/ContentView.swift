@@ -26,7 +26,7 @@ struct ContentView: View {
                     if password.count >= 8 && !username.isEmpty && !password.isEmpty {
                         
                         
-                        NavigationLink(destination:  FirstPage()) {
+                        NavigationLink(destination:  WelcomePage()) {
                             Text ("  Get started  ")
                                 .font(.callout)
                                 .bold()
@@ -64,9 +64,9 @@ struct ContentView: View {
                     .scaledToFit()
                     .aspectRatio(contentMode: .fill)
                     .frame(width: 607, height: 680)
-                    .opacity(0.2)
+                    .opacity(0.2 )
                 
-                
+               
                 
                 Text("Username")
                     .font(.title2)
