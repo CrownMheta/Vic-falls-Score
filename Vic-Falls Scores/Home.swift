@@ -19,9 +19,7 @@ struct Home: View {
         Player(name: "       Liverpool vs Man-U", imageName: "liverpool vs Man-U"),
         Player(name: "   Man-City Vs Real Madrid", imageName: "Salah"),
         Player(name: "      Newcastle Vs Arsenal", imageName: "newcastle-united-vs-arsenal"),
-        Player(name: "Real Madrid Vs Barcellona", imageName: "real madrid vs barcellona"),
-        
-    ]
+        Player(name: "Real Madrid Vs Barcellona", imageName: "real madrid vs barcellona")]
     
     @State private var currentIndex: Int = 0
     
