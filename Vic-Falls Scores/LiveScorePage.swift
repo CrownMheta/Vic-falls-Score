@@ -117,3 +117,4 @@ struct LiveScorePage: View {
 #Preview {
     LiveScorePage()
 }
+ 
